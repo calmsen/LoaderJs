@@ -7,17 +7,21 @@
         <script type="text/javascript" src="/LoaderJs/jquery-2.1.1.min.js"></script>
         <!--<script type="text/javascript" src="/LoaderJs/requirejs-2.1.14.js"></script>-->
         <script type="text/javascript" src="/LoaderJs/LoaderJs.js"></script>
+        <script>
+            loaderJsObj = new LoaderJs();
+        </script>
         <script type="text/javascript" src="/LoaderJs/main.js"></script>
         <script>
+            loaderJsObj.rn = Math.random();
             require(["Test2"], function(Test2) {
                new Test2();
-            });
+            }, loaderJsObj.rn);
             require(["Test1"], function(Test1) {
                new Test1();
-            });
+            }, loaderJsObj.rn);
             require(["Test3"], function(Test3) {
                new Test3();
-            });
+            }, loaderJsObj.rn);
         </script>
     </head>
     <body>
