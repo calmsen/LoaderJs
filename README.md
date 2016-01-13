@@ -1,0 +1,2 @@
+# LoaderJs
+LoaderJs - альтернатива requirejs
